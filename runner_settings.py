@@ -56,6 +56,8 @@ DEPENDER_PACKAGE_YMLS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "color", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "table", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "widgets", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
 )
 DEPENDER_SCRIPTS_JSON = []
@@ -67,8 +69,6 @@ MOOTOOLS_TEST_LOCATIONS = {
 #locations of html tests that should be included in the menu
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
-
-  "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
   "widgets": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "widgets", "Tests"))
 }
 

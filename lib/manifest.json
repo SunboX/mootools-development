@@ -11,15 +11,11 @@
 	"projects": {
 		"mootools-core": { 
 			"dir":"core",
-			"track-indirect": "core.hash"
+			"track-branch": "1.3wip"
 		},
 		"mootools-more": {
 			"dir":"more",
-			"track-indirect": "more.hash"
-		},
-		"art": {
-			"dir":"art",
-			"track-indirect": "art.hash"
+			"track-branch": "1.3wip"
 		},
 		"mootools-depender": {
 			"dir":"depender",
@@ -27,36 +23,7 @@
 		},
 		"mootools-test-runner": {
 			"dir":"test-runner",
-			"track-indirect": "runner.hash"
-		},
-		"clientcide": {
-			"track-indirect": "clientcide.hash"
-		},
-		"mootools-color": {
-			"dir":"color",
-			"track-indirect": "color.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-
-		"mootools-touch": {
-			"dir":"touch",
-			"track-indirect": "touch.hash"
-		},
-
-		"mootools-table": {
-			"dir":"table",
-			"track-indirect": "table.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-
-		"art-widgets": {
-			"dir":"widgets",
-			"track-indirect": "widgets.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-branch": "master"
 		}
-
 	}
 }

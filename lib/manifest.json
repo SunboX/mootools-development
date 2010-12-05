@@ -15,7 +15,7 @@
 		},
 		"mootools-more": {
 			"dir":"more",
-			"refspec": "develop"
+			"refspec": "1.2x"
 		},
 		"mootools-depender": {
 			"dir":"depender",

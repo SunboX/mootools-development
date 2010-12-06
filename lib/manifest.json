@@ -19,13 +19,13 @@
 		},
 		"mootools-depender": {
 			"dir":"depender",
-			"track-indirect": "depender.hash",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron"]
 		},
 		"mootools-test-runner": {
 			"dir":"test-runner",
-			"track-indirect": "runner.hash",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron"]
 		}

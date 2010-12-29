@@ -8,3 +8,9 @@ lib/table
 lib/test-runner
 lib/touch
 lib/widgets
+jframe.tmproj
+lib/behavior
+lib/fittext
+lib/jframe
+lib/slick
+lib/more-behaviors

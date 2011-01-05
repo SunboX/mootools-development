@@ -50,7 +50,8 @@
 		"slick": {
 			"track-indirect": "slick.hash"
 		},
-		"touch": {
+		"mootools-touch": {
+			"dir":"touch",
 			"track-indirect": "touch.hash"
 		},
 		"mootools-table": {

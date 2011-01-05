@@ -49,11 +49,23 @@ DEPENDER_PACKAGE_YMLS = (
 #locations of all your package yamls
 #in this example, they're all located in the directory above the test runner
 #for example, ../core/package.yml for core
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "art", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "color", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "jframe", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "fittext", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "slick", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "table", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "touch", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "widgets", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
 )
-DEPENDER_SCRIPTS_JSON = []
+DEPENDER_SCRIPTS_JSON = [
+  ("clientcide",  "../clientcide/Source/scripts.json"),
+]
 
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
@@ -63,8 +75,12 @@ MOOTOOLS_TEST_LOCATIONS = {
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
 
-  "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
+  "more-behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
+  "jframe_containers": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "jframe", "Tests", "JFrame_Containers")),
+  "jframe_demos": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "jframe", "Tests", "JFrame_Demos")),
 }
+
+EXCLUDED_TESTS = ["more-behaviors"]
 
 MAKO_TEMPLATE_DIRS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "test_runner", "templates")),

@@ -41,6 +41,10 @@
 			"dir":"color",
 			"track-indirect": "color.hash"
 		},
+		"FitText": {
+			"dir":"fittext",
+			"track-branch": "master"
+		},
 		"jframe": {
 			"track-branch": "master"
 		},

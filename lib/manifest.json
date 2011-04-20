@@ -32,6 +32,9 @@
 		},
 		"more-behaviors": {
 			"track-branch": "master"
+		},
+		"mootools-runner": {
+			"track-branch": "master"
 		}
 	}
 }

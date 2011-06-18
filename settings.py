@@ -95,6 +95,7 @@ GENERIC_ASSETS = {
 
 MAKO_TEMPLATE_DIRS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "frontend_dev", "templates")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "django", "src", "depender", "templates")),
 )
 
 DOC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -107,3 +108,5 @@ DOCS = {
 }
 
 TITLE_PREFIX = 'MooTools Frontend'
+
+BUILDER_PACKAGES = ['Core', 'More', 'Behavior', 'Clientcide', 'More-Behaviors']

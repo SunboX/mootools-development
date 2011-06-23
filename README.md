@@ -25,4 +25,7 @@ If you just execute `./go` you'll get a menu prompting you for actions. The avai
 * install - installs everything; you can also just type `./go i`
 * depender - checks js dependencies; aka `./go d`
 * sync - synchronizes external libraries; aka `./go s`
-* run - runs the server on port 9876; aka `./go r`
+* run - runs the server on port 9876 in debug mode (which is slower and provides easier web debugging); aka `./go r`
+* live - runs the server on port 80; aka `./go l`
+
+NOTE: if you run the "live" mode, you should change settings.py so that DEBUG and DEPENDER_DEBUG are both set to `False`

@@ -21,7 +21,7 @@ PROJECTS = {
     "package": "../more/package.yml",
     "specs": ["../more/Specs/package.yml"],
     "demos": {
-      "path": "../more/Tests",
+      "path": "../more/Demos",
       "exclude": True
     },
     "docs": "../more/Docs",
@@ -37,7 +37,7 @@ PROJECTS = {
     "package": "../more-behaviors/package.yml",
     "specs": ["../more-behaviors/Specs/package.yml"],
     "demos": {
-      "path": "../more-behaviors/Tests",
+      "path": "../more-behaviors/Demos",
       "exclude": False
     },
     "docs": "../more-behaviors/Docs",
@@ -47,7 +47,7 @@ PROJECTS = {
     "package": "../clientcide/package.yml",
     "specs": ["../clientcide/Specs/package.yml"],
     "demos": {
-      "path": "../clientcide/Tests",
+      "path": "../clientcide/Demos",
       "exclude": False
     },
     "docs": "../clientcide/Docs",

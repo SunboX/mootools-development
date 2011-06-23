@@ -14,7 +14,6 @@ PROJECTS = {
       "../core-specs/1.3base/package.yml",
       "../core-specs/1.3client/package.yml"
     ],
-    "docs": "../core/Docs",
     "build": True
   },
   "More": {
@@ -24,7 +23,6 @@ PROJECTS = {
       "path": "../more/Demos",
       "exclude": True
     },
-    "docs": "../more/Docs",
     "build": True
   },
   "Behavior": {

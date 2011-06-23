@@ -1,4 +1,92 @@
+import logging
+from os.path import abspath, join, dirname
+DOC_ROOT = dirname(__file__)
+
+TITLE_PREFIX = 'Clientcide Development'
+
+# Set to true to re-load all JS every time. (slowish)
+DEPENDER_DEBUG = True
+
+PROJECTS = {
+  "Core": {
+    "package": "../core/package.yml",
+    "specs": [
+      "../core-specs/1.3base/package.yml",
+      "../core-specs/1.3client/package.yml"
+    ],
+    "docs": "../core/Docs",
+    "build": True
+  },
+  "More": {
+    "package": "../more/package.yml",
+    "specs": ["../more/Specs/package.yml"],
+    "demos": {
+      "path": "../more/Tests",
+      "exclude": True
+    },
+    "docs": "../more/Docs",
+    "build": True
+  },
+  "Behavior": {
+    "package": "../behavior/package.yml",
+    "specs": ["../behavior/Specs/package.yml"],
+    "docs": "../behavior/Docs",
+    "build": True
+  },
+  "More-Behaviors": {
+    "package": "../more-behaviors/package.yml",
+    "specs": ["../more-behaviors/Specs/package.yml"],
+    "demos": {
+      "path": "../more-behaviors/Tests",
+      "exclude": False
+    },
+    "docs": "../more-behaviors/Docs",
+    "build": True
+  },
+  "Clientcide": {
+    "package": "../clientcide/package.yml",
+    "specs": ["../clientcide/Specs/package.yml"],
+    "demos": {
+      "path": "../clientcide/Tests",
+      "exclude": False
+    },
+    "docs": "../clientcide/Docs",
+    "build": True
+  },
+  "Depender": {
+    "package": "../depender/client/package.yml",
+    "build": False
+  }
+}
+
+GENERIC_ASSETS = {
+  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(DOC_ROOT, "../more/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(DOC_ROOT, "../more/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(DOC_ROOT, "../more/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(DOC_ROOT, "../more/Specs/assets/jsonp.js")),
+}
+
+# which buttons are visible at the top of the app? Comment out any you choose.
+BUTTONS = [
+  'Docs',
+  'Demos',
+  'Specs',
+  'Benchmarks',
+  'Builder'
+]
+
+#############################################################################
+###                  DO NOT EDIT BELOW THIS LINE                          ###
+#############################################################################
+
+
 # Django settings for mootools-test-runner project.
+
+logging.basicConfig(level=logging.INFO)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -41,72 +129,28 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
 )
 
-import os
-import logging
-logging.basicConfig(level=logging.INFO)
-
-DEPENDER_PACKAGE_YMLS = (
-#locations of all your package yamls
-#in this example, they're all located in the directory above the test runner
-#for example, ../core/package.yml for core
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core-specs", "1.3base", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core-specs", "1.3client", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
-)
-DEPENDER_SCRIPTS_JSON = []
-
-# Set to true to re-load all JS every time. (slowish)
-DEPENDER_DEBUG = True
-
-MOOTOOLS_TEST_LOCATIONS = {
-#locations of html tests that should be included in the menu
-#these are typically in the Tests directory of the repository
-#example: ../more/Tests
-  "clientcide": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Tests")),
-  "more-behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
-  "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
-}
-EXCLUDED_TESTS = [""]
-
-MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests', 'Clientcide-Tests', 'Behavior-Tests', 'More-Behaviors-Tests']
-
-MOOTOOLS_RUNNER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "mootools-runner"))
-
-GENERIC_ASSETS = {
-  'Assets.js.test.js': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "Assets.js.test.js")),
-  'Assets.css.test.css': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "Assets.css.test.css")),
-  'mootools.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "mootools.png")),
-  'cow.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "cow.png")),
-  'notExisting.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "notExisting.png")),
-  'iDontExist.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "iDontExist.png")),
-  'iDontExistEither.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "iDontExistEither.png")),
-  'jsonp.js': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "jsonp.js")),
-  
-}
+MOOTOOLS_RUNNER_PATH = abspath(join(DOC_ROOT, "../mootools-runner"))
 
 MAKO_TEMPLATE_DIRS = (
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "frontend_dev", "templates")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "django", "src", "depender", "templates")),
+  abspath(join(DOC_ROOT, "frontend_dev/templates")),
+  abspath(join(DOC_ROOT, "../depender/django/src/depender/templates")),
 )
 
-DOC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DOCS = {
-  "Behavior": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Docs")),
-  "More Behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Docs")),
-  "More": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Docs")),
-  "Core": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "Docs")),
-  "Clientcide": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Docs")),
-}
+DEPENDER_PACKAGE_YMLS = []
+DEPENDER_SCRIPTS_JSON = []
+BUILDER_PACKAGES = []
 
-TITLE_PREFIX = 'MooTools Frontend'
+for name, project in PROJECTS.iteritems():
+  if project.has_key("package"):
+    DEPENDER_PACKAGE_YMLS.append(project['package'])
+  if project.has_key('scripts_json'):
+    DEPENDER_SCRIPTS_JSON.append(project['scripts_json'])
+  if project.has_key("specs"):
+    for spec in project["specs"]:
+      DEPENDER_PACKAGE_YMLS.append(spec)
+  if project.has_key("build") and project["build"] is True:
+    BUILDER_PACKAGES.append(name)
 
-BUILDER_PACKAGES = ['Core', 'More', 'Behavior', 'Clientcide', 'More-Behaviors']
+
+def GET_PATH(path):
+  return abspath(join(DOC_ROOT, path))

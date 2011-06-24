@@ -18,24 +18,24 @@ PROJECTS = {
   },
   "More": {
     "package": "../more/package.yml",
-    "specs": ["../more/Specs/package.yml"],
+    "specs": ["../more/Tests/Specs/package.yml"],
     "demos": {
-      "path": "../more/Demos",
+      "path": "../more/Tests/Interactive",
       "exclude": True
     },
     "build": True
   },
   "Behavior": {
     "package": "../behavior/package.yml",
-    "specs": ["../behavior/Specs/package.yml"],
+    "specs": ["../behavior/Tests/Specs/package.yml"],
     "docs": "../behavior/Docs",
     "build": True
   },
   "More-Behaviors": {
     "package": "../more-behaviors/package.yml",
-    "specs": ["../more-behaviors/Specs/package.yml"],
+    "specs": ["../more-behaviors/Tests/Specs/package.yml"],
     "demos": {
-      "path": "../more-behaviors/Demos",
+      "path": "../more-behaviors/Tests/Interactive",
       "exclude": False
     },
     "docs": "../more-behaviors/Docs",
@@ -43,9 +43,9 @@ PROJECTS = {
   },
   "Clientcide": {
     "package": "../clientcide/package.yml",
-    "specs": ["../clientcide/Specs/package.yml"],
+    "specs": ["../clientcide/Tests/Specs/package.yml"],
     "demos": {
-      "path": "../clientcide/Demos",
+      "path": "../clientcide/Tests/Interactive",
       "exclude": False
     },
     "docs": "../clientcide/Docs",
@@ -58,14 +58,14 @@ PROJECTS = {
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(DOC_ROOT, "../more/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(DOC_ROOT, "../more/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(DOC_ROOT, "../more/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(DOC_ROOT, "../more/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/jsonp.js")),
 }
 
 # which buttons are visible at the top of the app? Comment out any you choose.
